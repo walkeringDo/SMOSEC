@@ -1,0 +1,3268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Smobiler.Device</name>
+    </assembly>
+    <members>
+        <member name="T:Smobiler.Device.D100Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.D100Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D100Scanner.BarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D100Scanner.BarcodeScanStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D100Scanner.Setting(System.Boolean,System.Boolean,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设备设置
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D100Scanner.Setbarcodemode(Smobiler.Device.D2000Barcodemode,System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置条码扫描模式
+            </summary>
+            <param name="barcodemode">条码扫描模式</param>
+            <param name="interval">扫描间隔</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Smobiler.Device.D100Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.D100BarcodeScannEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D100BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D100BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D100BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 D100BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.D100BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D110Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.D110Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D110Scanner.BarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D110Scanner.BarcodeScanStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D110Scanner.Setting(System.Boolean,System.Boolean,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设备设置
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D110Scanner.Setbarcodemode(Smobiler.Device.D2000Barcodemode,System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置条码扫描模式
+            </summary>
+            <param name="barcodemode">条码扫描模式</param>
+            <param name="interval">扫描间隔</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Smobiler.Device.D110Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.D110BarcodeScannEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D110BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D110BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D110BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 D110BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.D110BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D2000Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.D2000Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.D2000Scanner.RFIDDataCaptured">
+            <summary>
+            RFID扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.D2000Scanner.RFIDTagRead">
+            <summary>
+            读标签后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.BarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.BarcodeScanStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.Setting(System.Boolean,System.Boolean,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设备设置
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.Setbarcodemode(Smobiler.Device.D2000Barcodemode,System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置条码扫描模式
+            </summary>
+            <param name="barcodemode">条码扫描模式</param>
+            <param name="interval">扫描间隔</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.Setscanmode(Smobiler.Device.D2000Scanmode,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置扫描模式
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.Open(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            打开RFID扫描模块
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.Close(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            关闭RFID扫描模块
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.GetPower(Smobiler.Device.D2000GetRFIDPowerEventHandler)">
+            <summary>
+            获取功率
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.SetPower(System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置功率
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.InventoryOnce(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            单次寻卡
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.InventoryStart(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始连续寻卡
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.InventoryStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止连续寻卡
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.ReadTagData(System.String,System.String,System.Int32,System.Int32,System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            读标签
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.WriteTagData(System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            写标签
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.D2000BarcodeScannEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D2000BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D2000BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 D2000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.D2000BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D2000RFIDScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D2000RFIDScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D2000RFIDScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000RFIDScanEventArgs.#ctor(System.String,System.Int32)">
+            <summary>
+            获取一个 D2000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="epc">扫描数据Epc</param>
+            <param name="rssi">扫描数据Rssi</param>
+        </member>
+        <member name="P:Smobiler.Device.D2000RFIDScanEventArgs.Epc">
+            <summary>
+            获取EPC值。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.D2000RFIDScanEventArgs.Rssi">
+            <summary>
+            获取RSSI值。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D2000RFIDTagReadEventHandler">
+            <summary>
+            一个委托，它表示读标签要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D2000RFIDTagReadEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D2000RFIDTagReadEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000RFIDTagReadEventArgs.#ctor(System.Boolean,System.String)">
+            <summary>
+            获取一个 D2000ButtonEventArgs 实例
+            </summary>
+            <param name="success">读Tag是否成功</param>
+            <param name="message">信息</param>
+        </member>
+        <member name="P:Smobiler.Device.D2000RFIDTagReadEventArgs.Success">
+            <summary>
+            获取读Tag是否成功。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.D2000RFIDTagReadEventArgs.Message">
+            <summary>
+            获取message。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D2000GetRFIDPowerEventHandler">
+            <summary>
+            一个委托，它表示获取RFID读写标签的功率后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D2000GetRFIDPowerEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D2000GetRFIDPowerEventArgs">
+            <summary>
+            为GetRFIDPower提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D2000GetRFIDPowerEventArgs.#ctor(System.Int32)">
+            <summary>
+            获取一个 D2000GetRFIDPowerEventArgs 实例
+            </summary>
+            <param name="readPower">读功率</param>
+        </member>
+        <member name="P:Smobiler.Device.D2000GetRFIDPowerEventArgs.Power">
+            <summary>
+            获取读功率。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D2000Scanmode">
+            <summary>
+            D2000扫描模式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.D2000Scanmode.Barcode">
+            <summary>
+            条码扫描
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.D2000Scanmode.RFID">
+            <summary>
+            RFID标签扫描
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D2000Barcodemode">
+            <summary>
+            D2000条码扫描模式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.D2000Barcodemode.One">
+            <summary>
+            长按连扫
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.D2000Barcodemode.Two">
+            <summary>
+            单次扫描,
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.D2000Barcodemode.Three">
+            <summary>
+            单次连扫
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D200Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.D200Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D200Scanner.BarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D200Scanner.BarcodeScanStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D200Scanner.Setting(System.Boolean,System.Boolean,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设备设置
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D200Scanner.Setbarcodemode(Smobiler.Device.D2000Barcodemode,System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置条码扫描模式
+            </summary>
+            <param name="barcodemode">条码扫描模式</param>
+            <param name="interval">扫描间隔</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Smobiler.Device.D200Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.D200BarcodeScannEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D200BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D200BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D200BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 D200BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.D200BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.D210Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.D210Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D210Scanner.BarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D210Scanner.BarcodeScanStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D210Scanner.Setting(System.Boolean,System.Boolean,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设备设置
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D210Scanner.Setbarcodemode(Smobiler.Device.D2000Barcodemode,System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置条码扫描模式
+            </summary>
+            <param name="barcodemode">条码扫描模式</param>
+            <param name="interval">扫描间隔</param>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Smobiler.Device.D210Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.D210BarcodeScannEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 D210BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.D210BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.D210BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 D210BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.D210BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.HMT1">
+            <summary>
+            智能眼镜
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.HMT1.Recognized">
+            <summary>
+            在识别到语音指令(播放文字完成)时触发
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.HMT1.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="M:Smobiler.Device.HMT1.#ctor">
+            <summary>
+            获取 HMT1 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.HMT1.Synthesis(System.String)">
+            <summary>
+            语音合成
+            </summary>
+            <param name="msg">需要朗读的文字</param>
+        </member>
+        <member name="M:Smobiler.Device.HMT1.SetCommands(System.String[])">
+            <summary>
+            设置指令
+            </summary>
+            <param name="commands">注册需要识别的信息</param>
+        </member>
+        <member name="M:Smobiler.Device.HMT1.RestoreCommands">
+            <summary>
+            重置指令
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.HMT1.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Smobiler.Device.HMT1.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.HMT1OnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.HMT1EventHandler">
+            <summary>
+            一个委托，它表示识别到语音指令后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 HMT1EventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.HMT1EventArgs">
+            <summary>
+            为Recognized提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.HMT1EventArgs.#ctor(Smobiler.Device.HMT1Type,System.String)">
+            <summary>
+            获取一个 HMT1EventArgs 实例
+            </summary>
+            <param name="type">类型</param>
+            <param name="msg">数据</param>
+        </member>
+        <member name="P:Smobiler.Device.HMT1EventArgs.Type">
+            <summary>
+            获取信息返回类型
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.HMT1EventArgs.Message">
+            <summary>
+            获取识别出的关键词
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.HMT1Type">
+            <summary>
+            HMT1信息返回类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.HMT1Type.Speak">
+            <summary>
+            使用Synthesis方法后，播放完成后返回
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.HMT1Type.Recognize">
+            <summary>
+            使用SetCommands方法后，识别关键词后返回
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.HMTButton">
+            <summary>
+            HMT按钮
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.HMTTextBox">
+            <summary>
+            HMT文本框
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R200Scanner">
+            <summary>
+            R200条码扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R200Scanner.DataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R200Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="E:Smobiler.Device.R200Scanner.KeyDown">
+            <summary>
+            按键后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.#ctor">
+            <summary>
+            获取 Barcode 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.BarcodeScan(System.Int32)">
+            <summary>
+            扫描条码
+            </summary>
+            <param name="time">BarcodeIsMulti设置false: 取值 (1-600), 代表几秒后自动关闭, 默认 2。BarcodeIsMulti设置true: 取值(2-50), 代表连续扫描间隔, 默认 2</param>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.BarcodeIsMulti(System.Boolean)">
+            <summary>
+            是否开启连续扫描
+            </summary>
+            <param name="isMulti">true为开启，false为关闭（默认）</param>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.BarcodeScanStop">
+            <summary>
+            停止扫描
+            </summary>
+            <remarks>在持续扫描条码时，调用后停止持续扫描</remarks>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.EnableTrigger">
+            <summary>
+            启用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.DisableTrigger">
+            <summary>
+            禁用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.BindKeyDown">
+            <summary>
+            扫描键功能自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.UnbindKeyDown">
+            <summary>
+            扫描键功能不自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="M:Smobiler.Device.R200Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调（仅在存在错误时）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Smobiler.Device.R200BarcodeOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R200BarcodeScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R200BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R200BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 R200BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R200BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R200ButtonEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R200ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R200ButtonEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R200ButtonEventArgs.#ctor(Smobiler.Device.R200Keys)">
+            <summary>
+            获取一个 R200ButtonEventArgs 实例
+            </summary>
+            <param name="keyCode">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R200ButtonEventArgs.KeyCode">
+            <summary>
+            获取按钮数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R200Keys">
+            <summary>
+            R200按键类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R200Keys.F1">
+            <summary>
+            F1按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R200Keys.SCAN_F2">
+            <summary>
+            SCAN_F2按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R200Keys.SCAN">
+            <summary>
+            SCAN按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R200Keys.LeftTrigger">
+            <summary>
+            左侧按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R200Keys.RightTrigger">
+            <summary>
+            右侧按键
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.S5000Scanner">
+            <summary>
+            S5000扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.S5000Scanner.DataCaptured">
+            <summary>
+            返回信息后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.S5000Scanner.M1CardDataCaptured">
+            <summary>
+            读写M1卡信息后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.S5000Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.S5000Scanner.KeyDown">
+            <summary>
+            按键后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.#ctor">
+            <summary>
+            获取一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.DeviceOpen">
+            <summary>
+            打开设备
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.DeviceClose">
+            <summary>
+            关闭设备
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.ScanStart(System.Boolean)">
+            <summary>
+            开启扫描身份证服务
+            </summary>
+            <param name="needFP">是否获取指纹,默认false</param>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.ScanStop">
+            <summary>
+            关闭扫描身份证服务
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.SearchCard">
+            <summary>
+            寻找M1卡片
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.ReadCardData(System.Int32,System.Int32,System.Int32,System.Boolean,Smobiler.Device.M1Key,System.String)">
+            <summary>
+            读取M1卡片信息
+            </summary>
+            <param name="selector">扇区, 取值范围:(int)0-15, 默认:0</param>
+            <param name="block">块, 取值范围:(int)0-3, 默认:1 (备注:扇区0,块0为制造商占用块,写保护)</param>
+            <param name="blockCount">读取块数长度值, 取值范围:(int)1-4, 默认:1</param>
+            <param name="hexString">是否按16进制字符读取, 默认:true</param>
+            <param name="key">enum("A", "B"),密钥类型,默认:A</param>
+            <param name="password">十六进制字符密码, 默认:FFFFFFFFFFFF</param>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.WriteCardData(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,Smobiler.Device.M1Key,System.String)">
+            <summary>
+            写入M1卡片信息
+            </summary>
+            <param name="message">写入的内容,大小与blockCount统一</param>
+            <param name="selector">扇区, 取值范围:(int)0-15, 默认:0</param>
+            <param name="block">块, 取值范围:(int)0-2, 默认:1 (备注:扇区0,块0为制造商占用块,写保护;块3为读写协议标准,不允许修改)</param>
+            <param name="blockCount">读取块数长度值, 取值范围:(int)1-3, 默认:1(备注:一块为16字节)</param>
+            <param name="hexString">是否按16进制字符读取, 默认:true</param>
+            <param name="key">enum("A", "B"),密钥类型,默认:A</param>
+            <param name="password">十六进制字符密码, 默认:FFFFFFFFFFFF</param>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.EnableTrigger">
+            <summary>
+            启用按键回调
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.DisableTrigger">
+            <summary>
+            禁用按键回调
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.OnM1CardResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Smobiler.Device.S5000Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理蓝牙状态回调
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.S5000ScannerOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.S5000ScannerScanEventHandler">
+            <summary>
+            一个委托，它表示接收蓝牙后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 BluetoothEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.S5000ScannerScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000ScannerScanEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取S5000ScannerEventArgs实例
+            </summary>
+            <param name="name">姓名</param>
+            <param name="sex">性别</param>
+            <param name="nation">民族</param>
+            <param name="birth">生日</param>
+            <param name="address">地址</param>
+            <param name="idcard">身份证号</param>
+            <param name="office">签发机关</param>
+            <param name="effective">有效时间</param>
+            <param name="photo">照片</param>
+            <param name="finger1">右手指纹</param>
+            <param name="finger2">左手指纹</param>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Name">
+            <summary>
+            获取姓名。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Sex">
+            <summary>
+            获取性别。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Nation">
+            <summary>
+            获取民族。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.BirthDay">
+            <summary>
+            获取生日。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Address">
+            <summary>
+            获取地址。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.IDCard">
+            <summary>
+            获取身份证号。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Office">
+            <summary>
+            获取签发机关。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Effective">
+            <summary>
+            获取有效时间。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Photo">
+            <summary>
+            获取照片。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Finger1">
+            <summary>
+            获取右手指纹。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerScanEventArgs.Finger2">
+            <summary>
+            获取左手指纹。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.S5000ScannerButtonEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R100ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.S5000ScannerButtonEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000ScannerButtonEventArgs.#ctor(Smobiler.Device.S5000Keys)">
+            <summary>
+            获取一个 S5000ScannerButtonEventArgs 实例
+            </summary>
+            <param name="keyCode">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerButtonEventArgs.KeyCode">
+            <summary>
+            获取按钮数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.S5000ScannerM1CardEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R100ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.S5000ScannerM1CardEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.S5000ScannerM1CardEventArgs.#ctor(System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            获取一个 S5000ScannerM1CardEventArgs 实例
+            </summary>
+            <param name="success">是否成功</param>
+            <param name="error">错误信息</param>
+            <param name="card">M1卡ID,在success=true时返回</param>
+            <param name="readcard">M1卡读取指定块的内容,在success=true并且读取M1卡时返回</param>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerM1CardEventArgs.Success">
+            <summary>
+            获取是否操作成功
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerM1CardEventArgs.Error">
+            <summary>
+            获取错误信息
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerM1CardEventArgs.CardID">
+            <summary>
+            获取M1卡ID
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.S5000ScannerM1CardEventArgs.ReadData">
+            <summary>
+            获取读取的信息
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.S5000Keys">
+            <summary>
+            S5000按键类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.S5000Keys.F1">
+            <summary>
+            底部F1按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.S5000Keys.F2">
+            <summary>
+            底部F2按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.S5000Keys.LeftTrigger">
+            <summary>
+            左侧按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.S5000Keys.RightTrigger">
+            <summary>
+            右侧按键
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.M1Key">
+            <summary>
+            M1密钥类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.M1Key.A">
+            <summary>
+            类型A
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.M1Key.B">
+            <summary>
+            类型B
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.N800Scanner">
+            <summary>
+            N800条码扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.N800Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.N800Scanner.KeyDown">
+            <summary>
+            按键后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.N800Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.#ctor">
+            <summary>
+            获取 Barcode 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.BarcodeScan">
+            <summary>
+            单次扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.BarcodeScanStop">
+            <summary>
+            停止条码扫描
+            </summary>
+            <remarks>在持续扫描条码时，调用后停止持续扫描</remarks>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.BarcodeTimerScan">
+            <summary>
+            连续扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.ScanTimeout(System.Int32)">
+            <summary>
+            设置单次扫描超时时间
+            </summary>
+            <param name="timeout">取值范围: 1~10s 默认3</param>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.SetScanMode(Smobiler.Device.N800ScanMode)">
+            <summary>
+            设置扫描回调的方式
+            </summary>
+            <param name="scanmode">mode1 , 发送给服务端， mode2， 扫到内容添加到选中的输入框</param>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.EnableTrigger">
+            <summary>
+            启用扫描键,默认开启(键盘扫描只支持单扫)
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.DisableTrigger">
+            <summary>
+            禁用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Smobiler.Device.N800Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.N800ScannerOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.N800BarcodeScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R1000BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.N800BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.N800BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 N800BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.N800BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.N800ButtonEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 N800ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.N800ButtonEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.N800ButtonEventArgs.#ctor(Smobiler.Device.N800Keys)">
+            <summary>
+            获取一个 R1000ButtonEventArgs 实例
+            </summary>
+            <param name="keyCode">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.N800ButtonEventArgs.KeyCode">
+            <summary>
+            获取按钮数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.N800ScanMode">
+            <summary>
+            N800扫描回调的方式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.N800ScanMode.Mode1">
+            <summary>
+            发送给服务端
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.N800ScanMode.Mode2">
+            <summary>
+            扫到内容添加到选中的输入框
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.N800Keys">
+            <summary>
+            R1000按键类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.N800Keys.F1">
+            <summary>
+            F1按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.N800Keys.F2">
+            <summary>
+            F2按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.N800Keys.F3">
+            <summary>
+            F3按键
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.PD470Scanner">
+            <summary>
+            PD470扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.PD470Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.PD470Scanner.KeyDown">
+            <summary>
+            按键后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.PD470Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.#ctor">
+            <summary>
+            获取 Barcode 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.BarcodeScan">
+            <summary>
+            扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.BarcodeIsMulti(System.Boolean)">
+            <summary>
+            是否开启连续扫描
+            </summary>
+            <param name="isMulti">true为开启，false为关闭（默认）</param>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.BarcodeScanStop">
+            <summary>
+            停止条码扫描
+            </summary>
+            <remarks>在持续扫描条码时，调用后停止持续扫描</remarks>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.ScanTimeout(System.Int32)">
+            <summary>
+            设置单次扫描超时时间
+            </summary>
+            <param name="timeout">取值范围: 1~10s 默认5</param>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.EnableTrigger">
+            <summary>
+            启用扫描键,默认开启(键盘扫描只支持单扫)
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.DisableTrigger">
+            <summary>
+            禁用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Smobiler.Device.PD470Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.PD470ScannerOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.PD470BarcodeScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R1000BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.PD470BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PD470BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 PD470BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.PD470BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.PD470ButtonEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 PD470ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.PD470ButtonEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PD470ButtonEventArgs.#ctor(Smobiler.Device.PD470Keys)">
+            <summary>
+            获取一个 R1000ButtonEventArgs 实例
+            </summary>
+            <param name="keyCode">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.PD470ButtonEventArgs.KeyCode">
+            <summary>
+            获取按钮数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.PD470ScanMode">
+            <summary>
+            PD470扫描回调的方式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PD470ScanMode.Mode1">
+            <summary>
+            发送给服务端
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PD470ScanMode.Mode2">
+            <summary>
+            扫到内容添加到选中的输入框
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.PD470Keys">
+            <summary>
+            R1000按键类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PD470Keys.LeftKey">
+            <summary>
+            左按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PD470Keys.RightkKey">
+            <summary>
+            右按键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosCommandCollectionEditor.#ctor(System.Type)">
+            <summary>
+            打印命令集编辑
+            </summary>
+            <param name="type">类型</param>
+        </member>
+        <member name="M:Smobiler.Device.HttpPosPrinterHandler.ProcessRequest(System.Net.HttpListenerContext,Smobiler.Core.Web.HttpHandlerData)">
+            <summary>
+            过程请求
+            </summary>
+            <param name="context">内容</param>
+            <param name="handlerdata">处理器数据</param>
+        </member>
+        <member name="T:Smobiler.Device.PosPrinterBarcodeEntity">
+            <summary>
+            Pos打印条码实体类
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterBarcodeEntity.#ctor">
+            <summary>
+            声明一个 PosPrinterBarcodeEntity 的实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterBarcodeEntity.#ctor(Smobiler.Device.PosBarcodeType,System.String)">
+            <summary>
+            声明一个 PosPrinterBarcodeEntity 的实例
+            </summary>
+            <param name="barcodetype">条码类型</param>
+            <param name="content">条码内容</param>
+        </member>
+        <member name="P:Smobiler.Device.PosPrinterBarcodeEntity.Content">
+            <summary>
+            获取和设置打印条码内容
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.PosPrinterBarcodeEntity.Height">
+            <summary>
+            获取和设置一维条码高度
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.PosPrinterBarcodeEntity.BarcodeType">
+            <summary>
+            获取和设置打印条码类型
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterBarcodeEntity.ToData">
+            <summary>
+            打印数据编码格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterBarcodeEntity.ToData(System.Text.Encoding)">
+            <summary>
+            打印数据内容
+            </summary>
+            <param name="encoder">字符编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Smobiler.Device.PosBarcodeType">
+            <summary>
+            条码类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosBarcodeType.CODE128">
+            <summary>
+            一维码
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosBarcodeType.QRCODE">
+            <summary>
+            二维码
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosBarcodeType.CODE128Height">
+            <summary>
+            一维码高度
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.PosPrinterContentEntity">
+            <summary>
+            打印文本内容
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterContentEntity.#ctor">
+            <summary>
+            初始化PosPrinterContentEntity类的一个新实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterContentEntity.#ctor(System.String)">
+            <summary>
+            初始化PosPrinterContentEntity类的一个新实例
+            </summary>
+            <param name="content">文本内容</param>
+        </member>
+        <member name="P:Smobiler.Device.PosPrinterContentEntity.Content">
+            <summary>
+            获取和设置打印文本内容
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterContentEntity.ToData">
+            <summary>
+            打印数据编码格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterContentEntity.ToData(System.Text.Encoding)">
+            <summary>
+            打印数据内容
+            </summary>
+            <param name="encoder">字符编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Smobiler.Device.PosPrinterEntity">
+            <summary>
+            POS打印实体基类
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterEntity.ToData">
+            <summary>
+            打印数据编码格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterEntity.ToData(System.Text.Encoding)">
+            <summary>
+            打印数据内容
+            </summary>
+            <param name="encoder">字符编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Smobiler.Device.PosPrinterEntityCollection">
+            <summary>
+            打印数据集合
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.PosPrinterEntityCollection.Item(System.Int32)">
+            <summary>
+            获取和设置打印数据列表项
+            </summary>
+            <param name="index">列表项</param>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterEntityCollection.Add(Smobiler.Device.PosPrinterEntity)">
+            <summary>
+            列表中添加打印数据
+            </summary>
+            <param name="item">打印数据</param>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterEntityCollection.AddRange(Smobiler.Device.PosPrinterEntity[])">
+            <summary>
+            列表中添加打印数据
+            </summary>
+            <param name="items">打印数据</param>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterEntityCollection.Contains(Smobiler.Device.PosPrinterEntity)">
+            <summary>
+            确定打印数据中是否包含特定值
+            </summary>
+            <param name="item">特定值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterEntityCollection.IndexOf(Smobiler.Device.PosPrinterEntity)">
+            <summary>
+            确定打印数据中特定项的索引
+            </summary>
+            <param name="item">特定项</param>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterEntityCollection.Remove(Smobiler.Device.PosPrinterEntity)">
+            <summary>
+            从打印数据中移除特定对象的第一个匹配项
+            </summary>
+            <param name="item">特定项</param>
+        </member>
+        <member name="T:Smobiler.Device.PosPrinterProtocolEntity">
+            <summary>
+            打印协议指令转换
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterProtocolEntity.#ctor">
+            <summary>
+            初始化PosPrinterProtocolEntity类的一个新实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterProtocolEntity.#ctor(Smobiler.Device.PosPrinterProtocol)">
+            <summary>
+            初始化PosPrinterProtocolEntity类的一个新实例
+            </summary>
+            <param name="protocol">委托</param>
+            <param name="protocol">协议</param>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterProtocolEntity.#ctor(Smobiler.Device.PosPrinterProtocol,System.Object)">
+            <summary>
+            初始化PosPrinterProtocolEntity类的一个新实例
+            </summary>
+            <param name="protocol">协议</param>
+            <param name="protocolValue">协议值</param>
+        </member>
+        <member name="P:Smobiler.Device.PosPrinterProtocolEntity.Protocol">
+            <summary>
+            打印机协议指令
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterProtocolEntity.ToData">
+            <summary>
+            打印数据编码格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinterProtocolEntity.ToData(System.Text.Encoding)">
+            <summary>
+            打印数据内容
+            </summary>
+            <param name="encoder">字符编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Smobiler.Device.PosPrinterProtocol">
+            <summary>
+            协议指令
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Initial">
+            <summary>
+            初始化打印机
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Center">
+            <summary>
+            选择对齐方式：中间对齐
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Left">
+            <summary>
+            选择对齐方式：左对齐
+            </summary>
+        </member>
+        <!-- 对于成员“F:Smobiler.Device.PosPrinterProtocol.Right”忽略有格式错误的 XML 注释 -->
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Cut">
+            <summary>
+            全切纸命令
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Drawer">
+            <summary>
+            开启钱箱
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.EnabledBarcode">
+            <summary>
+            启用条码功能
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.DisabledBarcode">
+            <summary>
+            禁用条码功能
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Turnonblackmark">
+            <summary>
+            启用黑标检测功能
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Turnoffblackmark">
+            <summary>
+            关闭黑标检测功能
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.EnabledUnderline1">
+            <summary>
+            选择下划线模式（1点宽）
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.EnabledUnderline2">
+            <summary>
+            选择下划线模式（2点宽）
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.DisabledUnderline">
+            <summary>
+            取消下划线模式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.AbsoluteLocation">
+            <summary>
+            设置绝对打印位置
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.LeftMargin">
+            <summary>
+            设置左边距
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.LeftMargin0">
+            <summary>
+            取消设置左边距
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Size2">
+            <summary>
+            字符放大2倍
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Size1">
+            <summary>
+            标准字符
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.Steptoblackmark">
+            <summary>
+            走纸到黑标
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.PosPrinterProtocol.StepForwardBlackmark">
+            <summary>
+            检测到黑标前进n步，前进的距离为n/8(mm)
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.PosPrinter">
+            <summary>
+            蓝牙打印
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinter.#ctor">
+            <summary>
+            初始化PosPrinter类的一个新实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.PosPrinter.Print(Smobiler.Device.PosPrinterEntityCollection,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            内容打印
+            </summary>
+            <param name="Commands">打印指令集合</param>
+            <param name="handler">打印结果回调，可选参数，默认为null</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000Scanner">
+            <summary>
+            R1000条码扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R1000Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R1000Scanner.RFIDDataCaptured">
+            <summary>
+            RFID扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R1000Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="E:Smobiler.Device.R1000Scanner.KeyDown">
+            <summary>
+            按键后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R1000Scanner.RFIDTagRead">
+            <summary>
+            读标签后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R1000Scanner.RFIDTagWrite">
+            <summary>
+            写标签后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.#ctor">
+            <summary>
+            获取一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.BarcodeScan(System.Int32)">
+            <summary>
+            扫描条码
+            </summary>
+            <param name="timer">BarcodeIsMulti设置false: 取值 (1-600), 代表几秒后自动关闭, 默认 2。BarcodeIsMulti设置true: 取值(2-50), 代表连续扫描间隔, 默认 2</param>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.BarcodeScanStop">
+            <summary>
+            停止条码扫描
+            </summary>
+            <remarks>在持续扫描条码时，调用后停止持续扫描</remarks>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.BarcodeIsMulti(System.Boolean)">
+            <summary>
+            是否开启连续扫描
+            </summary>
+            <param name="isMulti">true为开启，false为关闭（默认）</param>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.RFIDType(Smobiler.Device.RFIDType)">
+            <summary>
+            RFID扫描模式
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.RFIDScan">
+            <summary>
+            扫描RFID
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.RFIDScanStop">
+            <summary>
+            停止RFID扫描
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.EnableTrigger">
+            <summary>
+            启用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.DisableTrigger">
+            <summary>
+            禁用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.BindKeyDown">
+            <summary>
+            扫描键功能自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.UnbindKeyDown">
+            <summary>
+            扫描键功能不自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.SetRFIDPower(System.Int32)">
+            <summary>
+            设置RFID读标签的功率（17-26）
+            </summary>
+            <param name="power">设置RFID读标签的功率（17-26）默认 26</param>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.ReadTag(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            获取设置的标签内容
+            </summary>
+            <param name="mbank">读取标签的区域，0:RESERVED区，1:EPC区，2:TID区，3:USER区</param>
+            <param name="startaddress">读取标签的起始地址</param>
+            <param name="length">读取标签数据的长度,单位word</param>
+            <param name="password">访问密码，默认值:'00000000'</param>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.WriteTag(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            写入标签内容
+            </summary>
+            <param name="mbank">读取标签的区域，0:RESERVED区，1:EPC区，2:TID区，3:USER区</param>
+            <param name="startaddress">读取标签的起始地址</param>
+            <param name="data">写入的数据</param>
+            <param name="password">访问密码，默认值:'00000000'</param>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Smobiler.Device.R1000Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.R1000ScannerOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000BarcodeScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R1000BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 R1000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R1000BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R1000RFIDScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R1000RFIDScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000RFIDScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000RFIDScanEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            获取一个 R1000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="epc">扫描数据Epc</param>
+            <param name="rssi">扫描数据Rssi</param>
+        </member>
+        <member name="P:Smobiler.Device.R1000RFIDScanEventArgs.Epc">
+            <summary>
+            获取EPC值。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.R1000RFIDScanEventArgs.Rssi">
+            <summary>
+            获取RSSI值。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R1000GetRFIDPowerEventHandler">
+            <summary>
+            一个委托，它表示获取RFID读写标签的功率后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R1000GetRFIDPowerEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000GetRFIDPowerEventArgs">
+            <summary>
+            为GetRFIDPower提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000GetRFIDPowerEventArgs.#ctor(System.Int32)">
+            <summary>
+            获取一个 R1000GetRFIDPowerEventArgs 实例
+            </summary>
+            <param name="power">功率</param>
+        </member>
+        <member name="P:Smobiler.Device.R1000GetRFIDPowerEventArgs.Power">
+            <summary>
+            获取功率。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R1000RFIDTagReadEventHandler">
+            <summary>
+            一个委托，它表示读标签要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000RFIDTagReadEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000RFIDTagReadEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000RFIDTagReadEventArgs.#ctor(System.Boolean,System.String)">
+            <summary>
+            获取一个 R2000ButtonEventArgs 实例
+            </summary>
+            <param name="success">读Tag是否成功</param>
+            <param name="message">信息</param>
+        </member>
+        <member name="P:Smobiler.Device.R1000RFIDTagReadEventArgs.Success">
+            <summary>
+            获取读Tag是否成功。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.R1000RFIDTagReadEventArgs.Message">
+            <summary>
+            获取message。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R1000RFIDTagWriteEventHandler">
+            <summary>
+            一个委托，它表示读写标签要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000TagEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000RFIDTagWriteEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000RFIDTagWriteEventArgs.#ctor(System.Boolean)">
+            <summary>
+            获取一个 R2000ButtonEventArgs 实例
+            </summary>
+            <param name="success">写Tag是否成功。</param>
+        </member>
+        <member name="P:Smobiler.Device.R1000RFIDTagWriteEventArgs.Success">
+            <summary>
+            获取写Tag是否成功。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R1000ButtonEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R1000ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R1000ButtonEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R1000ButtonEventArgs.#ctor(Smobiler.Device.R1000Keys)">
+            <summary>
+            获取一个 R1000ButtonEventArgs 实例
+            </summary>
+            <param name="keyCode">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R1000ButtonEventArgs.KeyCode">
+            <summary>
+            获取按钮数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.RFIDType">
+            <summary>
+            RFID扫描模式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.RFIDType.Singlescan">
+            <summary>
+            单个扫描
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.RFIDType.Filterscan">
+            <summary>
+            过滤扫描
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.RFIDType.Fullscan">
+            <summary>
+            完全扫描
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R1000Keys">
+            <summary>
+            R1000按键类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R1000Keys.F1">
+            <summary>
+            F1按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R1000Keys.F2">
+            <summary>
+            F2按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R1000Keys.F3">
+            <summary>
+            F3按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R1000Keys.F4">
+            <summary>
+            F4按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R1000Keys.F5_SCAN">
+            <summary>
+            F5按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R1000Keys.LeftTrigger">
+            <summary>
+            左侧按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R1000Keys.RightTrigger">
+            <summary>
+            右侧按键
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R100Scanner">
+            <summary>
+            H947条码扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R100Scanner.DataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R100Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="E:Smobiler.Device.R100Scanner.KeyDown">
+            <summary>
+            按键后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.#ctor">
+            <summary>
+            获取 Barcode 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.BarcodeScan(System.Int32)">
+            <summary>
+            扫描条码
+            </summary>
+            <param name="time">BarcodeIsMulti设置false: 取值 (1-600), 代表几秒后自动关闭, 默认 2。BarcodeIsMulti设置true: 取值(2-50), 代表连续扫描间隔, 默认 2</param>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.BarcodeIsMulti(System.Boolean)">
+            <summary>
+            是否开启连续扫描
+            </summary>
+            <param name="isMulti">true为开启，false为关闭（默认）</param>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.BarcodeScanStop">
+            <summary>
+            停止扫描
+            </summary>
+            <remarks>在持续扫描条码时，调用后停止持续扫描</remarks>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.EnableTrigger">
+            <summary>
+            启用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.DisableTrigger">
+            <summary>
+            禁用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.BindKeyDown">
+            <summary>
+            扫描键功能自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.UnbindKeyDown">
+            <summary>
+            扫描键功能不自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="M:Smobiler.Device.R100Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调（仅在存在错误时）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Smobiler.Device.R100BarcodeOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R100BarcodeScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R100BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R100BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 R100BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R100BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R100ButtonEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R100ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R100ButtonEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R100ButtonEventArgs.#ctor(Smobiler.Device.R100Keys)">
+            <summary>
+            获取一个 R100ButtonEventArgs 实例
+            </summary>
+            <param name="keyCode">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R100ButtonEventArgs.KeyCode">
+            <summary>
+            获取按钮数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R100Keys">
+            <summary>
+            R100按键类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R100Keys.F1">
+            <summary>
+            F1按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R100Keys.F2">
+            <summary>
+            F2按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R100Keys.F3">
+            <summary>
+            F3按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R100Keys.F4">
+            <summary>
+            F4按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R100Keys.F5_SCAN">
+            <summary>
+            F5按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R100Keys.LeftTrigger">
+            <summary>
+            左侧按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R100Keys.RightTrigger">
+            <summary>
+            右侧按键
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R2000Scanner">
+            <summary>
+            R2000条码扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R2000Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R2000Scanner.RFIDDataCaptured">
+            <summary>
+            RFID扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R2000Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="E:Smobiler.Device.R2000Scanner.KeyDown">
+            <summary>
+            按键后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R2000Scanner.RFIDTagRead">
+            <summary>
+            读标签后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.R2000Scanner.RFIDTagWrite">
+            <summary>
+            写标签后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.#ctor">
+            <summary>
+            获取 Barcode 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.BarcodeScan">
+            <summary>
+            扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.BarcodeScanStop">
+            <summary>
+            停止条码扫描
+            </summary>
+            <remarks>在持续扫描条码时，调用后停止持续扫描</remarks>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.BarcodeIsMulti(System.Boolean)">
+            <summary>
+            是否开启连续扫描
+            </summary>
+            <param name="isMulti">true为开启，false为关闭（默认）</param>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.RFIDType(Smobiler.Device.RFIDType)">
+            <summary>
+            RFID扫描模式
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.RFIDScan">
+            <summary>
+            扫描RFID
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.RFIDScanStop">
+            <summary>
+            停止RFID扫描
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.RFIDIsMulti(System.Boolean)">
+            <summary>
+            是否开启多标签模式
+            </summary>
+            <param name="isMulti">true为开启，false为关闭（默认）</param>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.EnableTrigger">
+            <summary>
+            启用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.DisableTrigger">
+            <summary>
+            禁用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.BindKeyDown">
+            <summary>
+            扫描键功能自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.UnbindKeyDown">
+            <summary>
+            扫描键功能不自定义
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.SetRFIDPower(System.Int32,System.Int32)">
+            <summary>
+            设置RFID读写标签的功率（5-30）
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.GetRFIDPower(Smobiler.Device.R2000GetRFIDPowerEventHandler)">
+            <summary>
+            获取RFID读写标签的功率
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.ReadTag(System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            获取设置的标签内容
+            </summary>
+            <param name="mbank">读取标签的区域，0:RESERVED区，1:EPC区，2:TID区，3:USER区</param>
+            <param name="startaddress">读取标签的起始地址</param>
+            <param name="length">读取标签数据的长度,单位word</param>
+            <param name="password">访问密码，默认值:'00000000'</param>
+            <param name="timeout">读取的超时时间，单位：毫秒 默认值：1000</param>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.ReadTagByFilter(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.String,System.Int32)">
+            <summary>
+            获取指定标签设置的内容
+            </summary>
+            <param name="mbank">读取标签的区域，0:RESERVED区，1:EPC区，2:TID区，3:USER区</param>
+            <param name="startaddress">读取标签的起始地址</param>
+            <param name="length">读取标签数据的长度,单位word</param>
+            <param name="fbank">过滤数据的区域 1 :EPC区,2: TID区 ,3: USER区</param>
+            <param name="fdata">过滤的数据</param>
+            <param name="fstartaddr">数据开始地址 如果fbank设置1，此参数设置2为按epc过滤</param>
+            <param name="matching">是否匹配，默认true,true:读与过滤数据相匹配的标签,false:读与过滤数据不相匹配的标签</param>
+            <param name="password">访问密码，默认值:'00000000'</param>
+            <param name="timeout">读取的超时时间，单位：毫秒 默认值：1000</param>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.tenToSixteen(System.String)">
+            <summary>
+            将string格式转化为十六进制数据
+            </summary>
+            <param name="msg">
+            </param>
+            <returns>
+            </returns>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.WriteTag(System.Int32,System.Int32,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            写入标签内容
+            </summary>
+            <param name="mbank">读取标签的区域，0:RESERVED区，1:EPC区，2:TID区，3:USER区</param>
+            <param name="startaddress">读取标签的起始地址</param>
+            <param name="data">写入的数据</param>
+            <param name="length">读取标签数据的长度,单位word</param>
+            <param name="password">访问密码，默认值:'00000000'</param>
+            <param name="timeout">读取的超时时间，单位：毫秒 默认值：1000</param>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.WriteTagByFilter(System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.String,System.Int32)">
+            <summary>
+            指定标签写入内容
+            </summary>
+            <param name="mbank">读取标签的区域，0:RESERVED区，1:EPC区，2:TID区，3:USER区</param>
+            <param name="startaddress">读取标签的起始地址</param>
+            <param name="data">写入的数据</param>
+            <param name="length">读取标签数据的长度,单位word</param>
+            <param name="fbank">过滤数据的区域 1 :EPC区,2: TID区 ,3: USER区</param>
+            <param name="fdata">过滤的数据</param>
+            <param name="fstartaddr">数据开始地址 如果fbank设置1，此参数设置2为按epc过滤</param>
+            <param name="matching">是否匹配，默认true,true:读与过滤数据相匹配的标签,false:读与过滤数据不相匹配的标签</param>
+            <param name="password">访问密码，默认值:'00000000'</param>
+            <param name="timeout">读取的超时时间，单位：毫秒 默认值：1000</param>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Smobiler.Device.R2000Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.R2000ScannerOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R2000BarcodeScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R2000BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 R2000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R2000BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R2000RFIDScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000RFIDScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R2000RFIDScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000RFIDScanEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            获取一个 R2000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="epc">扫描数据Epc</param>
+            <param name="rssi">扫描数据Rssi</param>
+        </member>
+        <member name="P:Smobiler.Device.R2000RFIDScanEventArgs.Epc">
+            <summary>
+            获取EPC值。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.R2000RFIDScanEventArgs.Rssi">
+            <summary>
+            获取RSSI值。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R2000GetRFIDPowerEventHandler">
+            <summary>
+            一个委托，它表示获取RFID读写标签的功率后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000GetRFIDPowerEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R2000GetRFIDPowerEventArgs">
+            <summary>
+            为GetRFIDPower提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000GetRFIDPowerEventArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            获取一个 R2000GetRFIDPowerEventArgs 实例
+            </summary>
+            <param name="readPower">读功率</param>
+            <param name="writePower">写功率</param>
+        </member>
+        <member name="P:Smobiler.Device.R2000GetRFIDPowerEventArgs.ReadPower">
+            <summary>
+            获取读功率。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.R2000GetRFIDPowerEventArgs.WritePower">
+            <summary>
+            获取写功率。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R2000RFIDTagReadEventHandler">
+            <summary>
+            一个委托，它表示读标签要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000RFIDTagReadEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R2000RFIDTagReadEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000RFIDTagReadEventArgs.#ctor(System.Boolean,System.String)">
+            <summary>
+            获取一个 R2000ButtonEventArgs 实例
+            </summary>
+            <param name="success">读Tag是否成功</param>
+            <param name="message">信息</param>
+        </member>
+        <member name="P:Smobiler.Device.R2000RFIDTagReadEventArgs.Success">
+            <summary>
+            获取读Tag是否成功。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.R2000RFIDTagReadEventArgs.Message">
+            <summary>
+            获取message。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R2000RFIDTagWriteEventHandler">
+            <summary>
+            一个委托，它表示读写标签要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000TagEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R2000RFIDTagWriteEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000RFIDTagWriteEventArgs.#ctor(System.Boolean)">
+            <summary>
+            获取一个 R2000ButtonEventArgs 实例
+            </summary>
+            <param name="success">写Tag是否成功。</param>
+        </member>
+        <member name="P:Smobiler.Device.R2000RFIDTagWriteEventArgs.Success">
+            <summary>
+            获取写Tag是否成功。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R2000ButtonEventHandler">
+            <summary>
+            一个委托，它表示按键后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 R2000ButtonEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.R2000ButtonEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.R2000ButtonEventArgs.#ctor(Smobiler.Device.R2000Keys)">
+            <summary>
+            获取一个 R2000ButtonEventArgs 实例
+            </summary>
+            <param name="keyCode">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.R2000ButtonEventArgs.KeyCode">
+            <summary>
+            获取按钮数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.R2000Keys">
+            <summary>
+            R2000按键类型
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R2000Keys.F1">
+            <summary>
+            F1按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R2000Keys.F2">
+            <summary>
+            F2按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R2000Keys.LeftTrigger">
+            <summary>
+            左侧按键（下侧按键）
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.R2000Keys.RightTrigger">
+            <summary>
+            右侧按键
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.B100Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.B100Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B100Scanner.BarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B100Scanner.BarcodeScanStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B100Scanner.MultiBarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始连续扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B100Scanner.BarcodeSetting(System.Boolean,System.Boolean,Smobiler.Device.B100Scanmode,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            按键扫描设置,参数不发时跟随系统
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B100Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.B100Scanner.B100BarcodeScannEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 B100BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.B100Scanner.B100BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B100Scanner.B100BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 B100BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.B100Scanner.B100BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.B100Scanmode">
+            <summary>
+            B100按键扫描模式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.B100Scanmode.One">
+            <summary>
+            长按连扫
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.B100Scanmode.Two">
+            <summary>
+            F2按键
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.B100Scanmode.Three">
+            <summary>
+            F3按键
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.B2000Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.B2000Scanner.BarcodeDataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.B2000Scanner.RFIDDataCaptured">
+            <summary>
+            RFID扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.B2000Scanner.RFIDTagRead">
+            <summary>
+            读标签后发生。
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.BarcodeScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.BarcodeScanStop(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.BarcodeSetting(System.Boolean,System.Boolean,Smobiler.Device.B2000Scanmode,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            按键扫描设置,参数不发时跟随系统
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.RfidScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            开始RFID扫码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.StopRfidScan(Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            停止RFID扫码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.SetRfidPower(System.Int32,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            设置RFID扫描标签的功率
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.GetRfidPower(Smobiler.Device.B2000GetRFIDPowerEventHandler)">
+            <summary>
+            获取RFID读写标签的功率
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.SeleteRfidCard(System.Int32,System.String,System.Boolean,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            选中或取消选中读写的标签
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.ReadRfidArea(System.Int32,System.Int32,System.Int32,System.String,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            读取指定的rfid的指定内容,需要先执行seleteRfidCard选中
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.WriteRfidArea(System.Int32,System.Int32,System.String,System.String,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            写入指定的rfid的指定内容,需要先执行seleteRfidCard选中
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="T:Smobiler.Device.B2000BarcodeScannEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 B2000BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.B2000BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 B2000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.B2000BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.B2000RFIDScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 B2000RFIDScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.B2000RFIDScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000RFIDScanEventArgs.#ctor(System.String,System.String,System.String)">
+            <summary>
+            获取一个 B2000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="epc">扫描数据Epc</param>
+            <param name="rssi">扫描数据Rssi</param>
+            /// <param name="tid">存放TID或USER数据（仅B2000模块支持）</param>
+        </member>
+        <member name="P:Smobiler.Device.B2000RFIDScanEventArgs.Epc">
+            <summary>
+            获取EPC值。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.B2000RFIDScanEventArgs.Rssi">
+            <summary>
+            获取RSSI值。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.B2000RFIDScanEventArgs.Tid">
+            <summary>
+            获取Tid值。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.B2000RFIDTagReadEventHandler">
+            <summary>
+            一个委托，它表示读标签要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 B2000RFIDTagReadEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.B2000RFIDTagReadEventArgs">
+            <summary>
+            为按键提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000RFIDTagReadEventArgs.#ctor(System.Boolean,System.String)">
+            <summary>
+            获取一个 B2000ButtonEventArgs 实例
+            </summary>
+            <param name="success">读Tag是否成功</param>
+            <param name="message">信息</param>
+        </member>
+        <member name="P:Smobiler.Device.B2000RFIDTagReadEventArgs.Success">
+            <summary>
+            获取读Tag是否成功。
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.B2000RFIDTagReadEventArgs.Message">
+            <summary>
+            获取message。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.B2000GetRFIDPowerEventHandler">
+            <summary>
+            一个委托，它表示获取RFID读写标签的功率后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 B2000GetRFIDPowerEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.B2000GetRFIDPowerEventArgs">
+            <summary>
+            为GetRFIDPower提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.B2000GetRFIDPowerEventArgs.#ctor(System.Int32)">
+            <summary>
+            获取一个 B2000GetRFIDPowerEventArgs 实例
+            </summary>
+            <param name="readPower">读功率</param>
+        </member>
+        <member name="P:Smobiler.Device.B2000GetRFIDPowerEventArgs.Power">
+            <summary>
+            获取读功率。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.B2000Scanmode">
+            <summary>
+            B2000按键扫描模式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.B2000Scanmode.One">
+            <summary>
+            长按连扫
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.B2000Scanmode.Two">
+            <summary>
+            单次扫描,
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.B2000Scanmode.Three">
+            <summary>
+            单次连扫
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.TriggerType">
+            <summary>
+            扫描方式
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.TriggerType.Hardware">
+            <summary>
+            代表硬件的方式，TC25上的两个黄色键，按键扫描
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.TriggerType.Software">
+            <summary>
+            代表软件的方式, 通过接口扫描
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.TC25Scanner">
+            <summary>
+            TC25条码扫描组件
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.TC25Scanner.DataCaptured">
+            <summary>
+            条码扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.TC25Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="E:Smobiler.Device.TC25Scanner.OnStatus">
+            <summary>
+            在方法调用当前扫描设备状态时发生
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TC25Scanner.#ctor">
+            <summary>
+            获取 TC25Scanner 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TC25Scanner.SetTriggerType(Smobiler.Device.TriggerType)">
+            <summary>
+            设置扫描方式
+            </summary>
+            <param name="type">扫描方式</param>
+        </member>
+        <member name="M:Smobiler.Device.TC25Scanner.Scan">
+            <summary>
+            扫描条码
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TC25Scanner.ScanStop">
+            <summary>
+            关闭扫描
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TC25Scanner.Status">
+            <summary>
+            获取当前扫描设备状态
+            </summary>
+            <remarks>通过事件 OnStatus 获取结果</remarks>
+        </member>
+        <member name="M:Smobiler.Device.TC25Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件或当前扫描设备状态（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。）
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="M:Smobiler.Device.TC25Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调（仅在存在错误时）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Smobiler.Device.TC25BarcodeOnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.TC25BarcodeScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 TC25BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.TC25BarcodeStatusEventHandler">
+            <summary>
+            一个委托，它表示获取当前扫描设备状态后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 TC25BarcodeStatusEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.TC25BarcodeScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TC25BarcodeScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 T25BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.TC25BarcodeScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.TC25BarcodeStatusEventArgs">
+            <summary>
+            提供扫描设备状态数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TC25BarcodeStatusEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个TC25BarcodeStatusEventArgs实例
+            </summary>
+            <param name="status">扫描设备状态</param>
+        </member>
+        <member name="P:Smobiler.Device.TC25BarcodeStatusEventArgs.Status">
+            <summary>
+            获取当前扫描设备状态。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.TSCPrinterEntity">
+            <summary>
+            TSC打印实体基类
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterEntity.ToData">
+            <summary>
+            打印数据编码格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterEntity.ToData(System.Text.Encoding)">
+            <summary>
+            打印数据内容
+            </summary>
+            <param name="encoder">字符编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Smobiler.Device.TSCPrinterEntityCollection">
+            <summary>
+            打印数据集合
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.TSCPrinterEntityCollection.Item(System.Int32)">
+            <summary>
+            获取和设置打印数据列表项
+            </summary>
+            <param name="index">列表项</param>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterEntityCollection.Add(Smobiler.Device.TSCPrinterEntity)">
+            <summary>
+            列表中添加打印数据
+            </summary>
+            <param name="item">打印数据</param>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterEntityCollection.AddRange(Smobiler.Device.TSCPrinterEntity[])">
+            <summary>
+            列表中添加打印数据
+            </summary>
+            <param name="items">打印数据</param>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterEntityCollection.Contains(Smobiler.Device.TSCPrinterEntity)">
+            <summary>
+            确定打印数据中是否包含特定值
+            </summary>
+            <param name="item">特定值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterEntityCollection.IndexOf(Smobiler.Device.TSCPrinterEntity)">
+            <summary>
+            确定打印数据中特定项的索引
+            </summary>
+            <param name="item">特定项</param>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterEntityCollection.Remove(Smobiler.Device.TSCPrinterEntity)">
+            <summary>
+            从打印数据中移除特定对象的第一个匹配项
+            </summary>
+            <param name="item">特定项</param>
+        </member>
+        <member name="T:Smobiler.Device.TSCPrinterRawProtocolEntity">
+            <summary>
+            TSC原始协议类
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterRawProtocolEntity.#ctor">
+            <summary>
+            初始化PosPrinterContentEntity类的一个新实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterRawProtocolEntity.#ctor(System.String)">
+            <summary>
+            初始化PosPrinterContentEntity类的一个新实例
+            </summary>
+            <param name="content">文本内容</param>
+        </member>
+        <member name="P:Smobiler.Device.TSCPrinterRawProtocolEntity.Content">
+            <summary>
+            获取和设置打印文本内容
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterRawProtocolEntity.ToData">
+            <summary>
+            打印数据编码格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Smobiler.Device.TSCPrinterRawProtocolEntity.ToData(System.Text.Encoding)">
+            <summary>
+            打印数据内容
+            </summary>
+            <param name="encoder">字符编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Smobiler.Device.P380Printer">
+            <summary>
+            TSC协议蓝牙打印
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.P380Printer.#ctor">
+            <summary>
+            初始化TSCPrinter类的一个新实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.P380Printer.Print(Smobiler.Device.TSCPrinterEntityCollection,Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            内容打印
+            </summary>
+            <param name="Commands">打印指令集合</param>
+            <param name="handler">打印结果回调，可选参数，默认为null</param>
+        </member>
+        <member name="T:Smobiler.Device.V7000Scanner">
+            <summary>
+            V7000扫描枪
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.V7000Scanner.DataCaptured">
+            <summary>
+            扫描后发生。
+            </summary>
+        </member>
+        <member name="E:Smobiler.Device.V7000Scanner.OnNotify">
+            <summary>
+            在方法调用返回通知时发生。
+            </summary>
+            <remarks>仅在出现错误时触发</remarks>
+        </member>
+        <member name="M:Smobiler.Device.V7000Scanner.#ctor">
+            <summary>
+            获取 V7000Scanner 的一个实例
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.V7000Scanner.Encoding">
+            <summary>
+            获取和设置数据的编码(gbk/utf-8)
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.V7000Scanner.IsContinue">
+            <summary>
+            获取和设置一个值，该值指示是否持续扫描
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.V7000Scanner.IsVoice">
+            <summary>
+            获取和设置一个值，该值指示扫描到结果时是否声音提示
+            </summary>
+        </member>
+        <member name="P:Smobiler.Device.V7000Scanner.IsVibator">
+            <summary>
+            获取和设置一个值，该值指示扫描到结果时是否震动提示
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.V7000Scanner.Scan">
+            <summary>
+            启动扫描
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.V7000Scanner.EnableTrigger">
+            <summary>
+            启用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.V7000Scanner.DisableTrigger">
+            <summary>
+            禁用扫描键
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.V7000Scanner.OnEventRaised(System.Object)">
+            <summary>
+            处理扫描事件（原因是由于扫描事件并不通过RPC结果回调，而是通过当前插件的Event。
+            </summary>
+            <param name="params"></param>
+        </member>
+        <member name="M:Smobiler.Device.V7000Scanner.OnRPCResult(System.Object,Smobiler.Core.RPC.RPCResultArgs)">
+            <summary>
+            用于接收RPC调用结果回调（仅在存在错误时）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Smobiler.Device.V7000OnNotifyEventHandler">
+            <summary>
+            一个委托，它表示在方法调用返回通知时要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 ComponentResultArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.V7000ScanEventHandler">
+            <summary>
+            一个委托，它表示条码扫描后要调用的方法。
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="e">包含事件数据的 H947BarcodeScanEventArgs</param>
+        </member>
+        <member name="T:Smobiler.Device.V7000ScanEventArgs">
+            <summary>
+            为BarcodeScan提供数据
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.V7000ScanEventArgs.#ctor(System.String)">
+            <summary>
+            获取一个 V7000BarcodeScanEventArgs 实例
+            </summary>
+            <param name="data">扫描数据</param>
+        </member>
+        <member name="P:Smobiler.Device.V7000ScanEventArgs.Data">
+            <summary>
+            获取扫描数据。
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.V7000Encoding">
+            <summary>
+            V7000Encoding
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.V7000Encoding.GBK">
+            <summary>
+            GBK
+            </summary>
+        </member>
+        <member name="F:Smobiler.Device.V7000Encoding.UTF8">
+            <summary>
+            UTF8
+            </summary>
+        </member>
+        <member name="T:Smobiler.Device.ZebraPrinter">
+            <summary>
+            斑马打印机组件
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.ZebraPrinter.#ctor">
+            <summary>
+            获取 ZebraPrinter 的一个实例
+            </summary>
+        </member>
+        <member name="M:Smobiler.Device.ZebraPrinter.Print(System.Byte[],Smobiler.Core.Controls.ComponentOnResultHandler)">
+            <summary>
+            内容打印
+            </summary>
+            <param name="data">打印数据</param>
+            <param name="handler">打印结果回调，可选参数，默认为null</param>
+        </member>
+    </members>
+</doc>
